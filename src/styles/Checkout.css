@@ -1,0 +1,36 @@
+div.checkout-wrapper {
+  text-align: center;
+  vertical-align: baseline; }
+  div.checkout-wrapper div.calculator-wrapper {
+    margin: 20px; }
+    div.checkout-wrapper div.calculator-wrapper .shipping-calc-panel {
+      min-height: 250px;
+      max-height: 600px;
+      overflow-y: scroll; }
+  div.checkout-wrapper div.form-wrapper {
+    margin: 20px; }
+    div.checkout-wrapper div.form-wrapper div.form-panel {
+      min-height: 250px;
+      max-height: 600px;
+      overflow-y: scroll; }
+      div.checkout-wrapper div.form-wrapper div.form-panel .flex-row {
+        display: inline-flex;
+        width: 100%; }
+        div.checkout-wrapper div.form-wrapper div.form-panel .flex-row .flex-item {
+          flex-grow: 1;
+          justify-content: space-between;
+          margin: 5px;
+          text-align: left; }
+          div.checkout-wrapper div.form-wrapper div.form-panel .flex-row .flex-item input {
+            width: 100%; }
+            div.checkout-wrapper div.form-wrapper div.form-panel .flex-row .flex-item input[type='submit'] {
+              margin-left: auto;
+              margin-right: auto;
+              text-align: center;
+              background-color: green;
+              color: white;
+              padding: 8px; }
+          div.checkout-wrapper div.form-wrapper div.form-panel .flex-row .flex-item select {
+            width: 100%; }
+
+/*# sourceMappingURL=Checkout.css.map */

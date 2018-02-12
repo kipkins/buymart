@@ -45,6 +45,20 @@ div.content {
   border-left: 2px solid black;
   overflow-y: scroll;
 }
+
+.inline {
+  display: inline-block;
+}
+
+.panel {
+  background-color: rgb(255,255,255);
+  min-width: 250px;
+  max-width: 500px;
+  padding: 25px;
+  border-radius: 25px;
+  border-bottom: 1px solid rgba(0,0,0,0.7);
+  border-right: 1px solid rgba(0,0,0,0.7);
+}
 /*div.product-container {*/
 /*display: flex;*/
 /*text-align: center;*/

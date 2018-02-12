@@ -13,7 +13,7 @@ class Product extends Component {
 
     render() {
         return (
-            <div className="product-panel">
+            <div className="product-panel panel inline">
                 <div className="panel-header">
                     <h3>{this.props.product.name}</h3>
                 </div>
