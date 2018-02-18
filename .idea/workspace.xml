@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87c45e6b-0c3a-4fe3-a8f4-4d501bd107e2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/styles/Storefront.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/styles/index.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/styles/thankyou.scss" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Checkout.js" afterPath="$PROJECT_DIR$/src/Checkout.js" />
-      <change beforePath="$PROJECT_DIR$/src/Market.js" afterPath="$PROJECT_DIR$/src/Market.js" />
-      <change beforePath="$PROJECT_DIR$/src/Product.js" afterPath="$PROJECT_DIR$/src/Product.js" />
-      <change beforePath="$PROJECT_DIR$/src/Storefront.css" afterPath="$PROJECT_DIR$/src/styles/Storefront.css" />
-      <change beforePath="$PROJECT_DIR$/src/Storefront.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Storefront.scss" afterPath="$PROJECT_DIR$/src/styles/Storefront.scss" />
-      <change beforePath="$PROJECT_DIR$/src/components/CheckoutForm.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/ShippingCalculator.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/db/Products.js" afterPath="$PROJECT_DIR$/src/db/Products.js" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/main.css" afterPath="$PROJECT_DIR$/src/ThankYou.js" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.js" afterPath="$PROJECT_DIR$/src/routes/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Checkout.css" afterPath="$PROJECT_DIR$/src/styles/Checkout.css" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Checkout.css.map" afterPath="$PROJECT_DIR$/src/styles/Checkout.css.map" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Checkout.scss" afterPath="$PROJECT_DIR$/src/styles/Checkout.scss" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -50,7 +29,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
@@ -149,11 +128,34 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Product.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Product.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>checkout</find>
+      <find>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -187,6 +189,7 @@
         <option value="$PROJECT_DIR$/src/styles/Storefront.scss" />
         <option value="$PROJECT_DIR$/src/Checkout.js" />
         <option value="$PROJECT_DIR$/src/styles/index.scss" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -313,12 +316,12 @@
       <workItem from="1518553183591" duration="4795000" />
       <workItem from="1518654379160" duration="1798000" />
       <workItem from="1518761778087" duration="2654000" />
-      <workItem from="1518896986368" duration="12179000" />
+      <workItem from="1518896986368" duration="12448000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43197000" />
+    <option name="totallyTimeSpent" value="43466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-23" y="27" width="1665" height="1023" extended-state="0" />
@@ -375,16 +378,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Market.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/CheckoutForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -761,16 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -886,6 +869,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
           <folding />
         </state>
       </provider>
