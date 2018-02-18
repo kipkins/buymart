@@ -1,0 +1,22 @@
+div.thank-you-container {
+  text-align: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .details-wrapper {
+    margin:0 55px 0 55px;
+
+    .detail-row {
+      display: table;
+      text-align: left;
+      width: 100%;
+      padding: 3px;
+
+      .detail-item {
+        display: table-cell;
+        width: 40%;
+        vertical-align: middle;
+      }
+    }
+  }
+}

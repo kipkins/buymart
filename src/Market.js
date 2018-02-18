@@ -17,7 +17,7 @@ class Market extends Component {
         return (
             <div className="product-container">
                 {this.renderProducts()}
-                {/*<Match pattern="/products/:productId/checkout" component={Checkout} />*/}
+                <p>All products come with a 30 day money back guarantee.</p>
             </div>
         )
     }

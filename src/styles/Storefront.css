@@ -1,0 +1,23 @@
+div.product-container {
+  text-align: center;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  div.product-container .product-panel {
+    height: 400px;
+    margin: 20px; }
+    div.product-container .product-panel .product-price {
+      padding: 20px; }
+    div.product-container .product-panel .product-features ul {
+      text-align: left; }
+    div.product-container .product-panel .buy-product {
+      position: absolute;
+      bottom: 35px;
+      width: 100%; }
+      div.product-container .product-panel .buy-product .buy-button {
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%; }
+        div.product-container .product-panel .buy-product .buy-button:hover {
+          cursor: pointer; }
+
+/*# sourceMappingURL=Storefront.css.map */

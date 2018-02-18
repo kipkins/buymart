@@ -1,0 +1,105 @@
+div.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 58px;
+  background-color: #0843a3;
+  border-bottom: 2px solid black;
+  vertical-align: top; }
+  div.toolbar div#toolbar-hamburger-icon {
+    display: inline-block;
+    width: 45px;
+    height: 58px;
+    padding: 18px 0 0 10px; }
+    div.toolbar div#toolbar-hamburger-icon span {
+      display: block;
+      margin: 4px;
+      height: 4px;
+      width: 65%;
+      background: white; }
+  div.toolbar .toolbar-heading {
+    display: inline-block;
+    height: 58px;
+    vertical-align: top; }
+
+.whitehead {
+  color: white; }
+
+div.sidebar {
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  width: 198px;
+  background-color: #a5acb7;
+  text-align: left;
+  border-right: 2px solid black; }
+  div.sidebar .sidebar-item {
+    padding: 8px 0 10px 25px; }
+    div.sidebar .sidebar-item:hover {
+      cursor: pointer; }
+    div.sidebar .sidebar-item.selected {
+      background-color: #54c8ff;
+      border-top: solid 1px grey;
+      border-bottom: solid 1px grey; }
+    div.sidebar .sidebar-item a {
+      text-decoration: none;
+      color: black; }
+
+div.content {
+  position: fixed;
+  top: 60px;
+  left: 200px;
+  right: 0;
+  bottom: 0;
+  background-color: #c0c9d6;
+  padding: 25px;
+  border-left: 2px solid black;
+  overflow-y: scroll; }
+
+.inline {
+  display: inline-block; }
+
+.alert {
+  border: 3px solid rgba(255, 0, 0, 0.6); }
+
+.border-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7); }
+
+h3, h4, h5, h6 {
+  margin: 0; }
+
+.panel {
+  background-color: white;
+  min-width: 250px;
+  max-width: 500px;
+  padding: 25px;
+  border-radius: 25px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+  border-right: 1px solid rgba(0, 0, 0, 0.7); }
+  .panel .panel-header {
+    vertical-align: middle;
+    text-align: center; }
+  .panel .panel-content {
+    position: relative;
+    line-height: 25px;
+    height: 100%;
+    width: 100%; }
+    .panel .panel-content .flex-row {
+      display: inline-flex;
+      width: 100%; }
+      .panel .panel-content .flex-row .flex-item {
+        flex-grow: 1;
+        justify-content: space-between;
+        margin: 5px;
+        text-align: left; }
+
+.button {
+  background-color: #1b8e15;
+  color: white;
+  border-radius: 25px;
+  padding: 20px;
+  font-size: large; }
+
+/*# sourceMappingURL=index.css.map */

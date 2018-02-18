@@ -1,0 +1,17 @@
+div.thank-you-container {
+  text-align: center;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  div.thank-you-container .details-wrapper {
+    margin: 0 55px 0 55px; }
+    div.thank-you-container .details-wrapper .detail-row {
+      display: table;
+      text-align: left;
+      width: 100%;
+      padding: 3px; }
+      div.thank-you-container .details-wrapper .detail-row .detail-item {
+        display: table-cell;
+        width: 40%;
+        vertical-align: middle; }
+
+/*# sourceMappingURL=thankyou.css.map */

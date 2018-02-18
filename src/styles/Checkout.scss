@@ -1,25 +1,23 @@
 div.checkout-wrapper {
   text-align: center;
-  vertical-align: baseline;
 
   div.calculator-wrapper {
+    vertical-align: top;
     margin: 20px;
 
     .shipping-calc-panel {
-      min-height: 250px;
+      min-height: 260px;
       max-height: 600px;
-      overflow-y: scroll;
-
     }
   }
 
   div.form-wrapper {
+    vertical-align: top;
     margin: 20px;
 
     div.form-panel {
-      min-height: 250px;
+      min-height: 260px;
       max-height: 600px;
-      overflow-y: scroll;
 
       .flex-row {
         display: inline-flex;
@@ -33,13 +31,8 @@ div.checkout-wrapper {
 
           input {
             width: 100%;
-            &[type='submit'] {
-              margin-left: auto;
-              margin-right: auto;
+            &.submit-button {
               text-align: center;
-              background-color: green;
-              color: white;
-              padding: 8px;
             }
           }
 

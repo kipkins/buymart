@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-
-import Db from './db/Products'
+import { BrowserRouter as Redirect } from 'react-router-dom';
+import Db from './db/Products';
+import ThankYou from './ThankYou';
 // import CheckoutForm from './components/CheckoutForm'
 // import ShippingCalculator from './components/ShippingCalculator'
 import './styles/Checkout.css'
@@ -11,60 +12,84 @@ class Checkout extends Component  {
         const db = new Db();
         const shippingCost = 5.99;
         const product = db.products[this.props.match.params.productId];
-        this.state = {shippingCost: shippingCost, total: shippingCost + product.price,  product: product};
+        this.formFields = {
+            name:'',
+            streetAddress:'',
+            city:'',
+            state:'',
+            zipCode:''
+        };
+        this.state = {shippingCost: shippingCost, total: shippingCost + product.price,  product: product, shippingForm: this.formFields, submitted: false};
         this.shippingStateChange = this.shippingStateChange.bind(this);
+        this.updateFormValues = this.updateFormValues.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    shippingStateChange(evt) {
-        var shippingCost = this.calculateShipping(evt.target.value)
-        this.setState({shippingCost: shippingCost, total: shippingCost + this.state.product.price});
-    }
+    shippingStateChange = (evt) => {
+        let shippingCost = this.calculateShipping(evt.target.value);
+        this.formFields.state = evt.target.value;
+        this.setState({shippingCost: shippingCost, total: shippingCost + this.state.product.price, shippingForm: this.formFields});
+    };
 
-    handleSubmit(evt) {
-        console.log()
-    }
+    handleSubmit = (evt) => {
+        evt.preventDefault();
+        let valid = true;
+        const formValues = this.state.shippingForm;
 
-    states() {
+        Object.keys(formValues).map((key, i) => {
+            let val = formValues[key].trim();
+            if(key === 'zipCode'){
+                if(val.toString().length !== 5){
+                    valid = false;
+                }
+            }
+            else if(val.length < 0 || val === ''){
+                valid = false;
+            }
+        });
+
+        if(valid) {
+            // this.setState({submitted: true})
+            this.props.history.push(
+                {
+                    pathname: '/thank-you',
+                    state: this.state
+                })
+        }
+    };
+
+    states = () => {
         return (
             ['','AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']
         )
     }
 
-    findProduct() {
-
-    }
-
-    calculateShipping(state) {
+    calculateShipping = (state) => {
         const baseCost = 5.99;
-        let shipCost = 0;
+        let shipCost;
 
-        switch(state) {
-            case 'MN':
-                shipCost;
-                break;
-            case 'CA':
-            case 'MA':
-            case 'NY':
-                shipCost = baseCost + 7.50;
-                break;
-            case 'AL':
-            case 'FL':
-            case 'GA':
-                shipCost = 3.99;
-                break;
-            default:
-                shipCost = 5.99;
+        if (state === 'MN') {
+            shipCost = 0.00;
         }
-        return shipCost;
-    }
+        else if (['CA', 'MA', 'NY'].indexOf(state) > -1) {
+            shipCost = baseCost + 7.50;
+        }
+        else if (['AL', 'FL', 'GA'].indexOf(state) > -1) {
+            shipCost = 3.99;
+        }
+        else {
+            shipCost = 5.99;
+        }
 
-    orderTotal() {
-        return `$${this.state.product.price + this.calculateShipping()}`
-    }
+        return shipCost;
+    };
+
+    updateFormValues = (evt) => {
+        this.formFields[evt.target.name] = evt.target.value;
+        this.setState({shippingForm: this.formFields});
+    };
 
     render() {
-        const product = this.findProduct();
         return (
             <div className='checkout-wrapper'>
                 <div className='calculator-wrapper inline'>
@@ -89,16 +114,16 @@ class Checkout extends Component  {
                                     <label>
                                         Name
                                         <br />
-                                        <input type='text' required='true'/>
+                                        <input name='name' value={this.state.shippingForm.name} type='text' onChange={this.updateFormValues} required/>
                                     </label>
                                 </div>
                             </div>
                             <div className='flex-row'>
                                 <div className='flex-item'>
                                     <label>
-                                        Street
+                                        Street Address
                                         <br />
-                                        <input type='text' required='true'/>
+                                        <input name='streetAddress' value={this.state.shippingForm.streetAddress} type='text' onChange={this.updateFormValues} required/>
                                     </label>
                                 </div>
                             </div>
@@ -107,14 +132,14 @@ class Checkout extends Component  {
                                     <label>
                                         City
                                         <br />
-                                        <input type='text' required='true' />
+                                        <input name='city' value={this.state.shippingForm.city} type='text' onChange={this.updateFormValues} required />
                                     </label>
                                 </div>
                                 <div className='flex-item'>
                                     <label>
                                         State
                                         <br />
-                                        <select onChange={this.shippingStateChange} required='true'>
+                                        <select name='state' value={this.state.shippingForm.state} onChange={this.shippingStateChange} required>
                                             {this.states().map((state) => <option value={state}>{state}</option> )}
                                         </select>
                                     </label>
@@ -125,13 +150,20 @@ class Checkout extends Component  {
                                     <label>
                                         Zip Code
                                         <br />
-                                        <input type='number' minLength='5' maxLength='5' min='00001' max='99999'/>
+                                        <input
+                                            className= {this.state.shippingForm.zipCode.length > 0 && this.state.shippingForm.zipCode.length !== 5? "alert" : "" }
+                                            name='zipCode'
+                                            value={this.state.shippingForm.zipCode}
+                                            type='number'
+                                            minLength='5'
+                                            maxLength='5'
+                                            onChange={this.updateFormValues}/>
                                     </label>
                                 </div>
                             </div>
                             <div className='flex-row'>
                                 <div className='flex-item'>
-                                    <input type='submit' value='Submit' />
+                                    <input className='submit-button button' type='submit' value='Submit' />
                                 </div>
                             </div>
                         </form>
@@ -140,7 +172,6 @@ class Checkout extends Component  {
             </div>
         )
     }
-
 }
 
 export default Checkout

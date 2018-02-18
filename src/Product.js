@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
-import './Storefront.css'
+import './styles/Storefront.css'
 class Product extends Component {
 
     renderFeatures(){
@@ -30,7 +30,7 @@ class Product extends Component {
                     </div>
                     <div className='buy-product'>
                         <Link to={`/products/${this.props.product._id}/checkout`} >
-                            <button className='buy-button' >Buy</button>
+                            <button className='buy-button button' >Buy</button>
                         </Link>
                     </div>
                 </div>

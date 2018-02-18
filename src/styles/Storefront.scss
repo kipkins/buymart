@@ -1,0 +1,36 @@
+div.product-container {
+  text-align: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .product-panel {
+    height: 400px;
+    margin: 20px;
+
+    .product-price {
+      padding: 20px;
+    }
+
+    .product-features {
+      ul {
+        text-align: left;
+      }
+    }
+
+    .buy-product {
+      position: absolute;
+      bottom: 35px;
+      width: 100%;
+
+      .buy-button {
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

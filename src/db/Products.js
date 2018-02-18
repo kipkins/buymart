@@ -4,7 +4,7 @@ class Products {
         this.products = {
             '1': {
                 _id: 1,
-                price: 24.99,
+                price: 12.99,
                 name: 'Dart Board',
                 sku: 123425,
                 features: ['Darts', 'Board', 'Wall Mount', 'Batteries']
