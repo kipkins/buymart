@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Redirect } from 'react-router-dom';
+
 import Db from './db/Products';
-import ThankYou from './ThankYou';
-// import CheckoutForm from './components/CheckoutForm'
-// import ShippingCalculator from './components/ShippingCalculator'
+
 import './styles/Checkout.css'
 
 class Checkout extends Component  {
