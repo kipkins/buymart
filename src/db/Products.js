@@ -14,26 +14,16 @@ class Products {
                 price: 1899.99,
                 name: 'Pool Table',
                 sku: 12344,
-                features: ['Pool Balls', 'Triange', 'Leather Ball Catches', 'Green Fabric']
+                features: ['Pool Balls', 'Triangle', 'Leather Ball Catches', 'Green Fabric']
             },
             '3': {
                 _id: 3,
                 price: 14.99,
                 name: 'Bocce Ball',
                 sku: 12234,
-                features: ['4 Pairs of Colored Balls', 'Leed Ball', 'Carrying Case', 'Towel']
+                features: ['4 Pairs of Colored Balls', 'Target Ball (Pallina)', 'Carrying Case', 'Towel']
             }
-        }
-    }
-
-    getProducts() {
-        return this.products
-    }
-
-    findProduct(id) {
-        return (
-            this.products[id]
-        )
+        };
     }
 }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Product from './Product'
-import Db from './db/Products'
+
+import Product from './Product';
+import Db from './db/Products';
 
 class Market extends Component {
     renderProducts() {
@@ -13,9 +14,8 @@ class Market extends Component {
     }
 
     render() {
-        console.log(this.props);
         return (
-            <div className="product-container">
+            <div className='product-container'>
                 {this.renderProducts()}
                 <p>All products come with a 30 day money back guarantee.</p>
             </div>

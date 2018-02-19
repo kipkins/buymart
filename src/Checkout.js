@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Db from './db/Products';
 
-import './styles/Checkout.css'
+import './styles/Checkout.css';
 
 class Checkout extends Component  {
     constructor(props) {
@@ -17,19 +17,29 @@ class Checkout extends Component  {
             state:'',
             zipCode:''
         };
-        this.state = {shippingCost: shippingCost, total: shippingCost + product.price,  product: product, shippingForm: this.formFields, submitted: false};
+        this.state = {
+            shippingCost: shippingCost,
+            total: shippingCost + product.price,
+            product: product,
+            shippingForm: this.formFields,
+            submitted: false
+        };
         this.shippingStateChange = this.shippingStateChange.bind(this);
         this.updateFormValues = this.updateFormValues.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    shippingStateChange = (evt) => {
+    shippingStateChange(evt) {
         let shippingCost = this.calculateShipping(evt.target.value);
         this.formFields.state = evt.target.value;
-        this.setState({shippingCost: shippingCost, total: shippingCost + this.state.product.price, shippingForm: this.formFields});
+        this.setState({
+            shippingCost: shippingCost,
+            total: shippingCost + this.state.product.price,
+            shippingForm: this.formFields
+        });
     };
 
-    handleSubmit = (evt) => {
+    handleSubmit(evt) {
         evt.preventDefault();
         let valid = true;
         const formValues = this.state.shippingForm;
@@ -56,13 +66,13 @@ class Checkout extends Component  {
         }
     };
 
-    states = () => {
+    states() {
         return (
             ['','AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']
         )
     }
 
-    calculateShipping = (state) => {
+    calculateShipping(state) {
         const baseCost = 5.99;
         let shipCost;
 
@@ -82,7 +92,7 @@ class Checkout extends Component  {
         return shipCost;
     };
 
-    updateFormValues = (evt) => {
+    updateFormValues(evt) {
         this.formFields[evt.target.name] = evt.target.value;
         this.setState({shippingForm: this.formFields});
     };
@@ -149,12 +159,10 @@ class Checkout extends Component  {
                                         Zip Code
                                         <br />
                                         <input
-                                            className= {this.state.shippingForm.zipCode.length > 0 && this.state.shippingForm.zipCode.length !== 5? "alert" : "" }
+                                            className= {this.state.shippingForm.zipCode.length > 0 && this.state.shippingForm.zipCode.length !== 5 ? 'alert' : '' }
                                             name='zipCode'
                                             value={this.state.shippingForm.zipCode}
                                             type='number'
-                                            minLength='5'
-                                            maxLength='5'
                                             onChange={this.updateFormValues}/>
                                     </label>
                                 </div>

@@ -1,29 +1,31 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
-import './styles/Storefront.css'
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+
+import './styles/Storefront.css';
+
 class Product extends Component {
 
-    renderFeatures(){
+    renderFeatures() {
         return (
             this.props.product.features.map((feature) => (
                 <li key={feature}>{feature}</li>
             ))
         )
-    }
+    };
 
     render() {
         return (
-            <div className="product-panel panel inline">
-                <div className="panel-header">
+            <div className='product-panel panel inline'>
+                <div className='panel-header'>
                     <h3>{this.props.product.name}</h3>
                 </div>
-                <div className="panel-content">
-                    <div className="product-price">
+                <div className='panel-content'>
+                    <div className='product-price'>
                         <h4>
                             ${this.props.product.price}
                         </h4>
                     </div>
-                    <div className="product-features">
+                    <div className='product-features'>
                         <ul>
                             {this.renderFeatures()}
                         </ul>
@@ -36,7 +38,7 @@ class Product extends Component {
                 </div>
             </div>
         )
-    }
+    };
 }
 
 export default Product
