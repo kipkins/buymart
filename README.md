@@ -2,7 +2,7 @@
 ## Prerequisites
 1. Yarn (I think you can npm without issue)
 2. React
-3. react-router-dom: yarn add react-router-dom@new **select** **version** **4.2.0**
+3. react-router-dom: yarn add react-router-dom@4.2.0 or npm install react-router-dom@4.2.0
 
 ## How To Run
 yarn start
