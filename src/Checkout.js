@@ -163,7 +163,8 @@ class Checkout extends Component  {
                                             name='zipCode'
                                             value={this.state.shippingForm.zipCode}
                                             type='number'
-                                            onChange={this.updateFormValues}/>
+                                            onChange={this.updateFormValues}
+                                            required/>
                                     </label>
                                 </div>
                             </div>
